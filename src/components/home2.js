@@ -6,8 +6,11 @@ import swap from '../assets/swap.png'
 import money from '../assets/money.png'
 import graph from '../assets/graph.png'
 import code from '../assets/code.png'
+import { useNavigate } from "react-router-dom";
 
 const DemeterDesktop = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="background h-fill overflow-clip">
             <div className="flex flex-row justify-between h-20 items-center px-16">
@@ -40,15 +43,18 @@ const DemeterDesktop = () => {
                     <div className="flex flex-row items-center space-x-6">
                         <div className="flex flex-row space-x-1 items-center">
                             <img src={eth_logo} className="h-8"></img>
-                            <p className="text-md font-medium text-white">Ethereum</p>
+                            <p className="text-md font-medium text-white">
+                                Ethereum
+                            </p>
                         </div>
                     </div>
                     <button className="items-center rounded-full header-connect-button py-1 px-3">
-                        <p className="text-md font-medium nice-blue-color hover:text-white">Connect</p>
+                        <p className="text-md font-medium nice-blue-color hover:text-white">
+                            Connect
+                        </p>
                     </button>
                 </div>
             </div>
-
 
             <div className="mainChunk flex flex-row border-0 border-white h-screen relative width-full justify-center px-16">
                 <div className="flex self-center z-10">
@@ -81,19 +87,35 @@ const DemeterDesktop = () => {
             <div className="w-screen py-16 px-16 relative space-y-10">
                 <div className="flex flex-row justify-between">
                     <div className="features-l1 flex flex-col justify-between rounded-3xl px-8 py-8">
-                        <p className="text-xl text-white font-semibold">Lend Tokens</p>
+                        <p className="text-xl text-white font-semibold">
+                            Lend Tokens
+                        </p>
                         <div>
-                            <p className="text-white font-md">Our self paying loans earn interest on</p>
-                            <p className="text-white font-md">Real World Assets</p>
-                            <p className="text-white font-md mt-8 nice-blue-color">lend Tokens</p>
+                            <p className="text-white font-md">
+                                Our self paying loans earn interest on
+                            </p>
+                            <p className="text-white font-md">
+                                Real World Assets
+                            </p>
+                            <p className="text-white font-md mt-8 nice-blue-color">
+                                lend Tokens
+                            </p>
                         </div>
                     </div>
                     <div className="features-l1 flex flex-col justify-between rounded-3xl px-8 py-8">
-                        <p className="text-xl text-white font-semibold">Lend Tokens</p>
+                        <p className="text-xl text-white font-semibold">
+                            Lend Tokens
+                        </p>
                         <div className="">
-                            <p className="text-white font-md">Our self paying loans earn interest on</p>
-                            <p className="text-white font-md">Real World Assets</p>
-                            <p className="text-white font-md mt-8 nice-blue-color">lend Tokens</p>
+                            <p className="text-white font-md">
+                                Our self paying loans earn interest on
+                            </p>
+                            <p className="text-white font-md">
+                                Real World Assets
+                            </p>
+                            <p className="text-white font-md mt-8 nice-blue-color">
+                                lend Tokens
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -127,8 +149,13 @@ const DemeterDesktop = () => {
 
                 <div className="w-full h-32 rounded-3xl giant-pill flex flex-row justify-between px-14 py-8 items-center">
                     <div className="row row-col space-y-1">
-                        <p className="text-white font-bold text-2xl">Powered by the Demeter Labs Protocol</p>
-                        <p className="text-white font-thin text-xl">The worlds most innovative RWA investments by a global community.</p>
+                        <p className="text-white font-bold text-2xl">
+                            Powered by the Demeter Labs Protocol
+                        </p>
+                        <p className="text-white font-thin text-xl">
+                            The worlds most innovative RWA investments by a
+                            global community.
+                        </p>
                     </div>
                     <button class="w-36 h-14 border-white border rounded-2xl hover:border-gray-300">
                         <p className="text-white font-thin text-lg hover:text-gray-300">Learn more</p>
@@ -168,7 +195,7 @@ const DemeterDesktop = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default DemeterDesktop
+export default DemeterDesktop;
