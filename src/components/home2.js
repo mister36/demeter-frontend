@@ -78,7 +78,7 @@ const DemeterDesktop = () => {
                 <div className="h-32 w-full glass absolute bottom-0"></div>
             </div>
 
-            <div className=".very-dark-blue w-screen py-8 px-16 relative space-y-8">
+            <div className="w-screen py-16 px-16 relative space-y-10">
                 <div className="flex flex-row justify-between">
                     <div className="features-l1 flex flex-col justify-between rounded-3xl px-8 py-8">
                         <p className="text-xl text-white font-semibold">Lend Tokens</p>
