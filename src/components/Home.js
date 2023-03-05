@@ -10,31 +10,27 @@ import { useNavigate } from "react-router-dom";
 import React from "react"
 import { SSX } from "@spruceid/ssx";
 
+
 const DemeterDesktop = () => {
     const navigate = useNavigate();
 
-    const [session, setState] = React.useState(undefined)
     const [address, setAddress] = React.useState(undefined)
     const [siwe, setSiwe] = React.useState(undefined)
     const [signature, setSignature] = React.useState(undefined)
-    const [domain, setDomain] = React.useState(undefined)
 
     const signIn = async () => {
         const ssx = new SSX({
-            enableDaoLogin: true,
-            resolveEns: true,
-            providers: {
-                web3: { driver: window.ethereum },
-                server: { host: "https://mainnet.infura.io/v3/9dd4365367ba484a98276fedd5ef2e37" },
-            },
+          enableDaoLogin: true,
+          resolveEns: true,
+          providers: {
+            web3: { driver: window.ethereum },
+            rpc: { service: "infura", apiKey: process.env.REACT_APP_INFURA },
+          },
         });
-        const { success, error, session } = await ssx.signIn();
-        console.log(error)
-        if (!success) console.log(error)
-        setState(session)
-        const { address, siwe, signature, ens: { domain } } = session;
-
-        console.log(address)
+        const session = await ssx.signIn()
+        setAddress(session.walletAddress)
+        setSiwe(session.siwe)
+        setSignature(session.signature)
     };
 
     return (
@@ -76,7 +72,7 @@ const DemeterDesktop = () => {
                     </div>
                     <button 
                         className="items-center rounded-full header-connect-button py-1 px-3"
-                        onClick={signIn}
+                        onClick={() => {signIn()}}
                     >
                         <p className="text-md font-medium nice-blue-color hover:text-white">
                             Connect

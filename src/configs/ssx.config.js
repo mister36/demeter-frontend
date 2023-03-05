@@ -1,10 +1,9 @@
-const getSSXConfig = async () => {
+export const ssxConfig = {
+    siweConfig: {
+       statement: "Sign into my example dapp.",
+    },
+    providers: {
+       backend: { host: "https://api.example.com/" },
+    },
+};
 
-    return { 
-          enableDaoLogin: !!(process.env.REACT_APP_SSX_DAO_LOGIN === "true"),
-          // ADD THIS LINE
-          providers: { server: { host: process.env.REACT_APP_SSX_METRICS_SERVER ?? "" } },
-    };
-  };
-  
-  export default getSSXConfig;
