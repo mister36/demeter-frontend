@@ -1,3 +1,8 @@
+.nice-blue-color {
+    color: #4C82FB;
+}
+
+
 .background {
     background: linear-gradient(180deg, #202738, #070816);
 }
@@ -67,11 +72,19 @@
 }
 
 
+.features {
+    background-color: #0D111C;
+}
 .features-l1 {
-    background: #131A2A;
     width: 644px;
     height: 360px;
+    background-image: url("../assets/tokens.png");
+    background-size: 100%;
 }
-.fake-buttons {
-    color: #4C82FB;
+
+.features-l2 {
+    width: 420px;
+    height: 240px;
+    background: #0D111C;
+    border: #1B2236 0.25px solid;
 }

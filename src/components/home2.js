@@ -41,7 +41,7 @@ const DemeterDesktop = () => {
                             <p className="text-md font-medium text-white">Ethereum</p>
                         </div>
                     </div>
-                    <div className="flex flex-row items-center space-x-1 rounded-full header-connect-button py-1 px-3">
+                    <div className="flex flex-row items-center space-x-1 rounded-full nice-blue-color py-1 px-3">
                         <p className="text-md font-medium connect-button">Connect</p>
                         <p className="align-text-top">|</p>
                         <img src={down_arrow} className="h-4 opacity-50"></img>
@@ -70,29 +70,46 @@ const DemeterDesktop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="portal1 absolute left-1/4 top-1/2"></div>
-                <div className="portal2 absolute left-1/2 top-1/3"></div>
-                <div className="portal2 absolute left-3/4 top-1/4"></div>
+                <div className="portal1 absolute left-1/4 top-1/2 "></div>
+                <div className="portal2 absolute left-1/2 top-1/3 "></div>
+                <div className="portal2 absolute left-3/4 top-1/4 "></div>
             </div>
 
-
-            <div className="bg-black h-screen z-20 flex">
-                <div className="flex flex-row justify-around w-screen mt-12">
+            <div className="features w-screen py-16 px-16 relative ">
+                <div className="flex flex-row justify-between">
                     <div className="features-l1 flex flex-col justify-between rounded-3xl">
-                        <p className="text-xl text-white font-semibold pl-8 pt-8">Lend Tokens</p>
-                        <div className="pb-8 pl-8">
+                        <p className="text-xl text-white font-semibold pl-12 pt-8">Lend Tokens</p>
+                        <div className="pb-8 pl-12">
                             <p className="text-white font-md">Our self paying loans earn interest on</p>
                             <p className="text-white font-md">Real World Assets</p>
-                            <p className="text-white font-md mt-8 fake-buttons">lend Tokens</p>
+                            <p className="text-white font-md mt-8 nice-blue-color">lend Tokens</p>
                         </div>
                     </div>
-                    <div className="features-l1 flex flex-col justify-between rounded-3xl">
-                        <p className="text-xl text-white font-semibold pl-8 pt-8">Lend Tokens</p>
-                        <div className="pb-8 pl-8">
+                    <div className="features-l1 flex flex-col justify-between rounded-3xl"  >
+                        <p className="text-xl text-white font-semibold pl-12 pt-8">Lend Tokens</p>
+                        <div className="pb-8 pl-12">
                             <p className="text-white font-md">Our self paying loans earn interest on</p>
                             <p className="text-white font-md">Real World Assets</p>
-                            <p className="text-white font-md mt-8 fake-buttons">lend Tokens</p>
+                            <p className="text-white font-md mt-8 nice-blue-color">lend Tokens</p>
                         </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-row justify-between">
+                    <div className="justify-between features-l2 flex flex-col">
+                        <p className="text-white font-semibold text-2xl pl-4 pt-4">Borrow Crypto</p>
+                        <p className="text-white font-thin">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
+                        <p className="nice-blue-color">Borrow now</p>
+                    </div>
+                    <div className="justify-between features-l2 flex flex-col">
+                        <p className="text-white font-semibold text-2xl pl-4 pt-4">Borrow Crypto</p>
+                        <p className="text-white font-thin">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
+                        <p className="nice-blue-color">Borrow now</p>
+                    </div>
+                    <div className="justify-between features-l2 flex flex-col">
+                        <p className="text-white font-semibold text-2xl pl-4 pt-4">Borrow Crypto</p>
+                        <p className="text-white font-thin">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
+                        <p className="nice-blue-color">Borrow now</p>
                     </div>
                 </div>
             </div>
