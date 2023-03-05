@@ -1,22 +1,20 @@
 .nice-blue-color {
     color: #4C82FB;
 }
+.nice-purple-color {
+    color: #98A1C0;
+}
 
 
 .background {
     background: linear-gradient(180deg, #202738, #070816);
 }
 
-.buttonz {
-    color: #98A1C0;
-}
-
 .header-connect-button {
     background-color: rgb(76, 130, 251, 0.3);
 }
-
-.header-connect-button p {
-    color: #4C82FB
+.header-connect-button:hover {
+    background-color: rgb(76, 130, 251, 0.7);
 }
 
 .searchbox {
@@ -25,12 +23,6 @@
     border-color: rgb(255, 255, 255, 0.14);
     background-color: rgb(255, 255, 255, 0.07);
 }
-
-.sarchbox p {
-    color: #98A1C0;
-}
-
-
 
 
 .portal1 {
@@ -43,6 +35,7 @@
         rgba(166, 151, 255, 0)
     );
 }
+
 .portal2 {
     height: 982px;
     width: 550px;
@@ -53,6 +46,7 @@
         rgba(166, 151, 255, 0)
     );
 }
+
 .portal3 {
     height: 982px;
     width: 500px;
@@ -62,6 +56,10 @@
         rgb(30, 65, 238),
         rgba(166, 151, 255, 0)
     );
+}
+
+.glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0f131e);
 }
 
 .get-started-button {
@@ -79,12 +77,23 @@
     width: 644px;
     height: 360px;
     background-image: url("../assets/tokens.png");
-    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
 }
 
 .features-l2 {
     width: 420px;
     height: 240px;
-    background: #0D111C;
+    background: #060614;
     border: #1B2236 0.25px solid;
+}
+
+.giant-pill {
+    background: radial-gradient(
+        100% 120%,
+        #4673FA,
+        rgba(166, 151, 255, 0)
+    );
 }
