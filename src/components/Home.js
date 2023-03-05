@@ -1,227 +1,226 @@
-import "./Home.css";
+import "./Home.css"
+import more from '../assets/more.png'
+import eth_logo from '../assets/eth_logo.png'
+import magnify from '../assets/magnify.png'
+import swap from '../assets/swap.png'
+import money from '../assets/money.png'
+import graph from '../assets/graph.png'
+import code from '../assets/code.png'
+import { useNavigate } from "react-router-dom";
+import React from "react"
+import { SSX } from "@spruceid/ssx";
+import logo from '../assets/logo.png'
+
 
 const DemeterDesktop = () => {
+    const navigate = useNavigate();
+
+    const [address, setAddress] = React.useState(undefined)
+    const [siwe, setSiwe] = React.useState(undefined)
+    const [signature, setSignature] = React.useState(undefined)
+
+    const signIn = async () => {
+        const ssx = new SSX({
+          enableDaoLogin: true,
+          resolveEns: true,
+          providers: {
+            web3: { driver: window.ethereum },
+            rpc: { service: "infura", apiKey: process.env.REACT_APP_INFURA},
+          },
+        });
+        const session = await ssx.signIn()
+        setAddress(session.walletAddress)
+        setSiwe(session.siwe)
+        setSignature(session.signature)
+
+        console.log(session)
+    };
+
     return (
-        <div className="demeter-desktop">
-            <div className="divbackground-radial-gradient" />
-            <div className="div">
-                <div className="div1" />
-                <div className="div2">
-                    <div className="div3">
-                        <div className="a">
-                            <div className="lend-tokens">Lend Tokens</div>
-                            <div className="div4">
-                                <div className="our-self-repaying-loans">
-                                    Our self-repaying loans earn interest on
-                                    Real World Assets
-                                </div>
-                                <div className="invest-in-rwa">lend Tokens</div>
-                            </div>
-                        </div>
-                        <div className="a1">
-                            <div className="lend-tokens">Earn Yield</div>
-                            <div className="div4">
-                                <div className="our-self-repaying-loans">
-                                    Invest in Real World Assets and earn yield
-                                </div>
-                                <div className="invest-in-rwa">
-                                    Invest in RWA
-                                </div>
-                            </div>
-                        </div>
+        <div className="background h-fill overflow-clip">
+            <div className="flex flex-row justify-between h-20 items-center px-16">
+                <div>
+                    <p className="text-lg font-bold text-white ">D</p>
+                </div>
+                <div className="flex flex-row space-x-8 h-10 nice-purple-color">
+                    <div className="flex items-center hover:text-white">
+                        <p>Lend</p>
                     </div>
-                    <div className="div6">
-                        <div className="a2">
-                            <div className="div7">
-                                <div className="borrow-crypto">
-                                    Borrow Crypto
-                                </div>
-                                {/* <img
-                                    className="image-icon"
-                                    alt=""
-                                    src="../image@2x.png"
-                                /> */}
-                            </div>
-                            <div className="div8">
-                                <div className="leverage-your-crypto">
-                                    Leverage your crypto holdings to access
-                                    liquidity in the asset of your choice.
-                                </div>
-                                <div className="invest-in-rwa">Borrow now</div>
-                            </div>
-                        </div>
-                        <div className="a3">
-                            <div className="div9">
-                                <div className="synthetic-pools">
-                                    Synthetic Pools
-                                </div>
-                                {/* <img
-                                    className="image-icon1"
-                                    alt=""
-                                    src="../image1@2x.png"
-                                /> */}
-                            </div>
-                            <div className="div10">
-                                <div className="provide-liquidity-to">
-                                    Provide liquidity to pools on Demeter and
-                                    earn fees on swaps.
-                                </div>
-                                <div className="invest-in-rwa">
-                                    Provide liquidity
-                                </div>
-                            </div>
-                        </div>
-                        <div className="a4">
-                            <div className="div11">
-                                <div className="borrow-crypto">Build dApps</div>
-                                {/* <img
-                                    className="image-icon2"
-                                    alt=""
-                                    src="../image2@2x.png"
-                                /> */}
-                            </div>
-                            <div className="div12">
-                                <div className="build-apps-and">
-                                    Build apps and tools on the most innovative
-                                    Dapp on web 3. Integrate the Demeter API and
-                                    SDK.
-                                </div>
-                                <div className="invest-in-rwa">
-                                    Developer docs
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex items-center hover:text-white">
+                        <p>Earn</p>
                     </div>
-                    <div className="div13">
-                        <div className="div14">
-                            <b className="powered-by-the">
-                                Powered by the Demeter Labs protocol
-                            </b>
-                            <div className="the-worlds-most">
-                                The worlds most innovative RWA investments by a
-                                global community.
-                            </div>
-                        </div>
-                        <div className="a5">
-                            <div className="learn-more">Learn more</div>
-                        </div>
+                    <div className="flex items-center hover:text-white">
+                        <p>Borrow</p>
                     </div>
-                    <div className="div15">
-                        <div className="div16">
-                            <div className="div17">
-                                {/* <img
-                                    className="svg-icon"
-                                    alt=""
-                                    src="../svg.svg"
-                                />
-                                <img
-                                    className="svg-icon"
-                                    alt=""
-                                    src="../svg1.svg"
-                                />
-                                <img
-                                    className="svg-icon"
-                                    alt=""
-                                    src="../svg2.svg"
-                                /> */}
-                            </div>
-                            <div className="demeter-labs">
-                                © 2023 Demeter Labs
-                            </div>
-                        </div>
-                        <div className="div18">
-                            <div className="div19">
-                                <b className="app">App</b>
-                                <div className="lend">Lend</div>
-                                <div className="earn">Earn</div>
-                                <div className="borrow">Borrow</div>
-                                <div className="pools">Pools</div>
-                            </div>
-                            <div className="div19">
-                                <b className="protocol">Protocol</b>
-                                <div className="community">Community</div>
-                                <div className="governance">Governance</div>
-                                <div className="developers">Developers</div>
-                            </div>
-                            <div className="div19">
-                                <b className="company">Company</b>
-                                <div className="careers">Careers</div>
-                                <div className="blog">Blog</div>
-                                <div className="bounties">Bounties</div>
-                            </div>
-                            <div className="div19">
-                                <b className="get-help">Get Help</b>
-                                <div className="contact-us">Contact Us</div>
-                                <div className="help-center">Help Center</div>
-                            </div>
-                        </div>
+                    <div className="flex items-center hover:text-white">
+                        <p>Pool</p>
                     </div>
                 </div>
-                <div className="div23">
-                    <div className="harvest-rwa-yield">Harvest RWA Yield</div>
-                    <div className="a6">
-                        <div className="get-started">Get started</div>
-                    </div>
-                    <div className="div24">
-                        <div className="get-started">Learn more</div>
-                        {/* <img className="svg-icon3" alt="" src="../svg3.svg" /> */}
-                    </div>
+                <div className="w-96  h-8 flex items-center searchbox rounded-md justify-between px-2">
+                    <img src={magnify} className="h-6 opacity-50"></img>
+                    <p className="nice-purple-color font-light">
+                        Lending and RWA Yield
+                    </p>
+                    <div></div>
                 </div>
-                <b className="safe-liquidity-in-container">
-                    <span className="safe-liquidity-in-container1">
-                        <p className="safe-liquidity-in">Safe liquidity in</p>
-                        <p className="any-season"> any season</p>
-                    </span>
-                </b>
-                <b className="demeter-labs1">DEMETER LABS</b>
-                <div className="div-child" />
-            </div>
-            <div className="div25">
-                <div className="div26">
-                    {/* <img className="svg-icon4" alt="" src="../svg4.svg" /> */}
-                    <div className="divplaceholder">
-                        <div className="lending-and-rwa">
-                            Lending and RWA Yield
+                <div className="flex flex-row items-center space-x-8">
+                    <img src={more} className="h-6"></img>
+                    <div className="flex flex-row items-center space-x-6">
+                        <div className="flex flex-row space-x-1 items-center">
+                            <img src={eth_logo} className="h-8"></img>
+                            <p className="text-md font-medium text-white">
+                                Ethereum
+                            </p>
                         </div>
                     </div>
-                    <div className="div27">
-                        <div className="div28">/</div>
-                    </div>
-                </div>
-                <div className="div29">
-                    {/* <img className="svg-icon5" alt="" src="../svg5.svg" /> */}
-                    <div className="button">
-                        {/* <img
-                            className="image-icon3"
-                            alt=""
-                            src="../image3@2x.png"
-                        /> */}
-                        <div className="ethereum">Ethereum</div>
-                        {/* <img className="svg-icon6" alt="" src="../svg6.svg" /> */}
-                    </div>
-                    <div className="div30">
-                        <div className="get-started">Connect</div>
-                        <div className="div31" />
-                        {/* <img className="svg-icon7" alt="" src="../svg7.svg" /> */}
-                    </div>
-                </div>
-                <div className="d">D</div>
-                <div className="div32">
-                    <div className="lend1">Lend</div>
-                    <div className="earn1">Earn</div>
-                    <div className="borrow1">Borrow</div>
-                    <div className="pool">Pool</div>
+                    <button 
+                        className="items-center rounded-full header-connect-button py-1 px-3"
+                        onClick={() => {signIn()}}
+                    >
+                        <p className="text-md font-medium nice-blue-color hover:text-white">
+                            Connect
+                        </p>
+                    </button>
                 </div>
             </div>
-            <div className="a7">
-                <div className="lend-crypto">LEND CRYPTO</div>
-                <div className="div33">
-                    {/* <img className="div-item" alt="" /> */}
-                    <div className="lend-and-earn">
-                        Lend and earn RWA yield on Ethereum, Polygon, Optimism,
-                        and more.
+
+            <div className="mainChunk flex flex-row border-0 border-white h-screen relative width-full justify-center px-16 ">
+                <div className="flex self-center z-10">
+                    <div className="flex flex-row space-x-32">
+                        <div className="space-y-3">
+                            <p className="text-white tracking-wider big-font">Demeter Labs</p>
+                            <p className="text-white text-2xl font-normal">Safe liquidity in any season</p>
+                            <p className="text-white text-2xl font-thin">Harvest RWA Yield</p>
+                            {/* <div>
+                                <button className="text-white text-2xl font-normal bg-blue get-started-button w-96 px-2 py-1 rounded-full tracking-wider mt-5 ">
+                                    <p>
+                                        Get started 
+                                    </p>
+                                </button>
+                            </div> */}
+                        </div>
+                        <div>
+                            <img src={swap} className="rounded-3xl h-96"></img>
+                        </div>
                     </div>
-                    <div className="trade-tokens">Trade Tokens</div>
+                </div>
+                <div className="portal1 absolute left-1/4 top-1/2 "></div>
+                <div className="portal2 absolute left-1/2 top-1/3 "></div>
+                <div className="portal3 absolute left-3/4 top-1/4 "></div>
+                <div className="portal4 absolute left-8 top-1/4 "></div>
+                <div className="portal5 absolute -left-48 top-32 "></div>
+                <div className="h-32 w-full glass absolute bottom-0"></div>
+            </div>
+
+            <div className="w-screen py-16 px-16 relative space-y-10">
+                <div className="flex flex-row justify-between">
+                    <div className="features-l1 flex flex-col justify-between rounded-3xl px-8 py-8">
+                        <p className="text-xl text-white font-semibold">
+                            Lend Tokens
+                        </p>
+                        <div>
+                            <p className="text-white font-md">
+                                Our self paying loans earn interest on
+                            </p>
+                            <p className="text-white font-md">
+                                Real World Assets
+                            </p>
+                            <p className="text-white font-md mt-8 nice-blue-color">
+                                lend Tokens
+                            </p>
+                        </div>
+                    </div>
+                    <div className="features-l1 flex flex-col justify-between rounded-3xl px-8 py-8">
+                        <p className="text-xl text-white font-semibold">
+                            Lend Tokens
+                        </p>
+                        <div className="">
+                            <p className="text-white font-md">
+                                Our self paying loans earn interest on
+                            </p>
+                            <p className="text-white font-md">
+                                Real World Assets
+                            </p>
+                            <p className="text-white font-md mt-8 nice-blue-color">
+                                lend Tokens
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-row justify-between py-8">
+                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 px-6">
+                        <div className="flex flex-row justify-between">
+                            <p className="text-white font-semibold text-2xl">Borrow Crypto</p>
+                            <img src={money} className="h-8"></img>
+                        </div>
+                        <p className="text-white font-thin nice-purple-color text-2xl">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
+                        <p className="nice-blue-color">Borrow now</p>
+                    </div>
+                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 px-6">
+                        <div className="flex flex-row justify-between">
+                            <p className="text-white font-semibold text-2xl">Synthetic Pools</p>
+                            <img src={graph} className="h-8"></img>
+                        </div>                        
+                        <p className="text-white font-thin nice-purple-color text-2xl">Provide liquidity to pools on Demeter and earn fees on swaps.</p>
+                        <p className="nice-blue-color">Provide liquidity</p>
+                    </div>
+                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 px-6">
+                        <div className="flex flex-row justify-between">
+                            <p className="text-white font-semibold text-2xl">Build dApps</p>
+                            <img src={code} className="h-8"></img>
+                        </div>                        
+                        <p className="text-white font-thin nice-purple-color text-2xl">Build apps and tools on the most innovative Dapp on web 3. Integrate the Demeter API and SDK.</p>
+                        <p className="nice-blue-color">Developer docs</p>
+                    </div>
+                </div>
+
+                <div className="w-full h-32 rounded-3xl giant-pill flex flex-row justify-between px-14 py-8 items-center">
+                    <div className="row row-col space-y-1">
+                        <p className="text-white font-bold text-2xl">
+                            Powered by the Demeter Labs Protocol
+                        </p>
+                        <p className="text-white font-thin text-xl">
+                            The worlds most innovative RWA investments by a
+                            global community.
+                        </p>
+                    </div>
+                    <button className="w-36 h-14 border-white border rounded-2xl hover:border-gray-300">
+                        <p className="text-white font-thin text-lg hover:text-gray-300">Learn more</p>
+                    </button>
+                </div>
+            </div>
+
+            <div className="w-screen px-16 pt-16 pb-8 flex flex-row justify-between items-end .very-dark-blue">
+                <div className="w-1/3 flex flex-col">
+                    <img src={logo} className="h-20 w-20 mb-4"></img>
+                    <p className="text-white text-sm nice-purple-color font-thin">© 2023 Demeter Labs</p>
+                </div>
+                <div className="w-2/3 flex flex-row justify-between">
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">App</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Lend</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Earn</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Borrow</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Pools</p>
+                    </div>
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">Protocol</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Community</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Governance</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Developers</p>
+                    </div>
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">Company</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Careers</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Blog</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Bounties</p>
+                    </div>
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">Get Help</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Contact Us</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Help Center</p>
+                    </div>
                 </div>
             </div>
         </div>
