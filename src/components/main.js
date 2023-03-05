@@ -477,7 +477,7 @@ function Main(props) {
                         width: { sm: `calc(100% - ${drawerWidth}px)` },
                     }}
                 >
-                    <FeatureH1>Auctions</FeatureH1>
+                    <FeatureH1>Vaults</FeatureH1>
 
                     {/* searchbar */}
                     <Box
@@ -500,7 +500,7 @@ function Main(props) {
                             </Grid>
                             <Grid item xs={3}>
                                 <Select
-                                    placeholder="Upcoming Auctions"
+                                    placeholder="Upcoming Offerings"
                                     indicator={<KeyboardArrowDown />}
                                     sx={{
                                         width: "100%",
@@ -531,7 +531,7 @@ function Main(props) {
                                             }}
                                             value="dog"
                                         >
-                                            Upcoming Auctions
+                                            Upcoming
                                         </Option>
                                         <Option
                                             sx={{
@@ -540,7 +540,7 @@ function Main(props) {
                                             }}
                                             value="fish"
                                         >
-                                            Coming Auctions
+                                            Coming
                                         </Option>
                                         <Option
                                             sx={{

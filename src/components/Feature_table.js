@@ -11,6 +11,11 @@ import { BsArrowRightSquareFill } from "react-icons/bs";
 import { Box } from "@mui/system";
 import styled from "styled-components";
 
+import usdr from "./usdr.svg";
+import maple from "./maple.png";
+import goldfinch from "./goldfinch.webp";
+import ondo from "./ondo.png";
+
 const TableDiv = styled.div`
     span {
         display: block;
@@ -58,158 +63,77 @@ function createData(
     };
 }
 
-// const rows = [
-//   createData(
-//     1,
-//     `${grpNft}`,
-//     "Symbol",
-//     "SGD / USD",
-//     "Interest",
-//     "3.2%",
-//     "Tenor",
-//     "1 year",
-//     "Status",
-//     "Upcoming",
-//     "Time Left",
-//     "5h 24m 02s",
-//     "Quantity",
-//     "5000 lots"
-//   ),
-//   createData(
-//     2,
-//     `${grpNft}`,
-//     "Symbol",
-//     "SGD / USD",
-//     "Interest",
-//     "3.2%",
-//     "Tenor",
-//     "1 year",
-//     "Status",
-//     "Upcoming",
-//     "Time Left",
-//     "5h 24m 02s",
-//     "Quantity",
-//     "5000 lots"
-//   ),
-//   createData(
-//     3,
-//     `${grpNft}`,
-//     "Symbol",
-//     "SGD / USD",
-//     "Interest",
-//     "3.2%",
-//     "Tenor",
-//     "1 year",
-//     "Status",
-//     "Upcoming",
-//     "Time Left",
-//     "5h 24m 02s",
-//     "Quantity",
-//     "5000 lots"
-//   ),
-//   createData(
-//     4,
-//     `${grpNft}`,
-//     "Symbol",
-//     "SGD / USD",
-//     "Interest",
-//     "3.2%",
-//     "Tenor",
-//     "1 year",
-//     "Status",
-//     "Upcoming",
-//     "Time Left",
-//     "5h 24m 02s",
-//     "Quantity",
-//     "5000 lots"
-//   ),
-//   createData(
-//     5,
-//     `${grpNft}`,
-//     "Symbol",
-//     "SGD / USD",
-//     "Interest",
-//     "3.2%",
-//     "Tenor",
-//     "1 year",
-//     "Status",
-//     "Upcoming",
-//     "Time Left",
-//     "5h 24m 02s",
-//     "Quantity",
-//     "5000 lots"
-//   ),
-//   createData(
-//     6,
-//     `${grpNft}`,
-//     "Symbol",
-//     "SGD / USD",
-//     "Interest",
-//     "3.2%",
-//     "Tenor",
-//     "1 year",
-//     "Status",
-//     "Upcoming",
-//     "Time Left",
-//     "5h 24m 02s",
-//     "Quantity",
-//     "5000 lots"
-//   ),
-// ];
-
 export default function FeatureTable({ auctions, signer }) {
     const [rows, setRows] = useState([]);
 
-    // pull extraneous data on auctions
-    // useEffect(() => {
-    //     if (signer && auctions) {
-    //         const fillRows = async () => {
-    //             Promise.all(
-    //                 auctions.map(async (auction, index) => {
-    //                     const bond = new ethers.Contract(
-    //                         auction.auctioningToken,
-    //                         bondAbi,
-    //                         signer
-    //                     );
-
-    //                     const symbol = await bond.symbol();
-    //                     const maturity = await bond.maturity();
-
-    //                     const timeLeft = luxon.DateTime.fromISO(
-    //                         luxon.DateTime.fromSeconds(maturity.toNumber())
-    //                     )
-    //                         .diffNow(["days", "hours"])
-    //                         .toHuman();
-    //                     // .match(/.*(?=\.)/g);
-
-    //                     console.log("ma", maturity.toNumber());
-
-    //                     const data = createData(
-    //                         index,
-    //                         // `${grpNft}`,
-    //                         "Symbol",
-    //                         `${symbol} / USD`,
-    //                         "Interest",
-    //                         "3.2%",
-    //                         "Tenor",
-    //                         "1 year",
-    //                         "Status",
-    //                         "Upcoming",
-    //                         "Time Left",
-    //                         timeLeft,
-    //                         "Quantity",
-    //                         "5000 lots"
-    //                     );
-    //                     return data;
-    //                 })
-    //             ).then((all) => {
-    //                 setRows(all);
-    //             });
-    //         };
-
-    //         fillRows();
-    //     }
-    // }, [signer, auctions]);
+    useEffect(() => {
+        setRows([
+            createData(
+                1,
+                `${usdr}`,
+                "Name",
+                "Tangible USDR",
+                "Interest",
+                "9%",
+                "Timeframe",
+                "1 year",
+                "Status",
+                "Current",
+                "Time Left",
+                "5h 24m 02s",
+                "Liquidity",
+                "$2,832,247.72"
+            ),
+            createData(
+                2,
+                `${maple}`,
+                "Name",
+                "Maple Finance M11",
+                "Interest",
+                "6.64%",
+                "Timeframe",
+                "3 year",
+                "Status",
+                "Current",
+                "Time Left",
+                "24h 24m 02s",
+                "Liquidity",
+                "$32,106,329.12"
+            ),
+            createData(
+                3,
+                `${goldfinch}`,
+                "Name",
+                "Goldfinch Senior Pool",
+                "Interest",
+                "7.5%",
+                "Timeframe",
+                "4 year",
+                "Status",
+                "Current",
+                "Time Left",
+                "18h 24m 02s",
+                "Liquidity",
+                "$10,184,312.21"
+            ),
+            createData(
+                4,
+                `${ondo}`,
+                "Name",
+                "Ondo Finance OUSG",
+                "Interest",
+                "6.7%",
+                "Timeframe",
+                "10 year",
+                "Status",
+                "Current",
+                "Time Left",
+                "100h 24m 02s",
+                "Liquidity",
+                "$23,853,208.10"
+            ),
+        ]);
+    }, []);
 
     useEffect(() => {
         console.log(rows);
@@ -251,35 +175,71 @@ export default function FeatureTable({ auctions, signer }) {
                                             src={row.img}
                                             alt=""
                                             className="imgwidth"
+                                            style={{
+                                                width: "35px",
+                                                background: "white",
+                                                borderRadius: "17.5px",
+                                            }}
                                         />
                                         <Box>
                                             <span>{row.symboltitle}</span>
-                                            <p>{row.sgd}</p>
+                                            <p
+                                                style={{
+                                                    fontWeight: "700",
+                                                    fontSize: "18px",
+                                                }}
+                                            >
+                                                {row.sgd}
+                                            </p>
                                         </Box>
                                     </Box>
                                 </TableCell>
                                 <TableCell align="center">
                                     <Box>
                                         <span>{row.interestttle}</span>
-                                        <p>{row.interest}</p>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                            }}
+                                        >
+                                            {row.interest}
+                                        </p>
                                     </Box>
                                 </TableCell>
                                 <TableCell align="center">
                                     <Box>
                                         <span>{row.yearntitle}</span>
-                                        <p>{row.year}</p>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                            }}
+                                        >
+                                            {row.year}
+                                        </p>
                                     </Box>
                                 </TableCell>
                                 <TableCell align="center">
                                     <Box>
                                         <span>{row.statustitle}</span>
-                                        <p>{row.status}</p>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                            }}
+                                        >
+                                            {row.status}
+                                        </p>
                                     </Box>
                                 </TableCell>
                                 <TableCell align="center">
                                     <Box>
                                         <span>{row.timelefttitle}</span>
-                                        <p>{row.timelft}</p>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                            }}
+                                        >
+                                            {row.timelft}
+                                        </p>
                                     </Box>
                                 </TableCell>
                                 <TableCell

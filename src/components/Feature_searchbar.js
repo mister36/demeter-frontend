@@ -38,7 +38,7 @@ function Feature_searchbar() {
     return (
         <div>
             {" "}
-            <FeatureH1>Featured Auctions</FeatureH1>
+            <FeatureH1>Featured Offerings</FeatureH1>
             <Box
                 sx={{
                     padding: "25px 0px 25px",
@@ -67,8 +67,10 @@ function Feature_searchbar() {
                                     alignItems: "center",
                                 }}
                             >
-                                <TypoH2>SGD / USD</TypoH2>
-                                <TimeP>5h 24m 02s</TimeP>
+                                <TypoH2>
+                                    Tangible Real Estate Backed Dollar
+                                </TypoH2>
+                                <TimeP>wUSDR</TimeP>
                             </Box>
                             <Hr></Hr>
                             <Box
@@ -88,7 +90,7 @@ function Feature_searchbar() {
                                             color: " rgba(255, 255, 255, 0.55)",
                                         }}
                                     >
-                                        <span>3%</span>
+                                        <span>9%</span>
                                         <Dot></Dot>
                                         <span>1 year</span>
                                     </Box>
@@ -105,6 +107,116 @@ function Feature_searchbar() {
                         </Box>
                     </Grid>
                     <Grid item md={3}>
+                        <Box
+                            sx={{
+                                background:
+                                    "linear-gradient(to left, #21232f 5.89%,rgba(40, 46, 77, .4) 86.41%)",
+                                border: " 1px solid rgba(255, 255, 255, 0.12)",
+                                borderRadius: "12px",
+                                overflow: "hidden",
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    padding: "15px 20px",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <TypoH2>M11 Credit USDC Pool </TypoH2>
+                                <TimeP>Maple LP Tokens</TimeP>
+                            </Box>
+                            <Hr></Hr>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    padding: "15px 20px",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <Box>
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "10px",
+                                            color: " rgba(255, 255, 255, 0.55)",
+                                        }}
+                                    >
+                                        <span>6.64%</span>
+                                        <Dot></Dot>
+                                        <span>3 year</span>
+                                    </Box>
+                                    <TypoH3>$32,106,329.12</TypoH3>
+                                </Box>
+                                <Box
+                                    sx={{
+                                        width: "60px",
+                                    }}
+                                >
+                                    {/* <img src={grpNft} alt="" /> */}
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Grid>
+                    <Grid item md={3}>
+                        <Box
+                            sx={{
+                                background:
+                                    "linear-gradient(to left, #21232f 5.89%,rgba(40, 46, 77, .4) 86.41%)",
+                                border: " 1px solid rgba(255, 255, 255, 0.12)",
+                                borderRadius: "12px",
+                                overflow: "hidden",
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    padding: "15px 20px",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <TypoH2>Goldfinch Senior Pool Lending</TypoH2>
+                                <TimeP>FIDU</TimeP>
+                            </Box>
+                            <Hr></Hr>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    padding: "15px 20px",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <Box>
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "10px",
+                                            color: " rgba(255, 255, 255, 0.55)",
+                                        }}
+                                    >
+                                        <span>7.5%</span>
+                                        <Dot></Dot>
+                                        <span>4 year</span>
+                                    </Box>
+                                    <TypoH3>$10,184,312.21</TypoH3>
+                                </Box>
+                                <Box
+                                    sx={{
+                                        width: "60px",
+                                    }}
+                                >
+                                    {/* <img src={grpNft} alt="" /> */}
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Grid>
+                    {/* <Grid item md={3}>
                         <Box
                             sx={{
                                 background:
@@ -154,121 +266,10 @@ function Feature_searchbar() {
                                         width: "60px",
                                     }}
                                 >
-                                    {/* <img src={grpNft} alt="" /> */}
                                 </Box>
                             </Box>
                         </Box>
-                    </Grid>
-                    <Grid item md={3}>
-                        <Box
-                            sx={{
-                                background:
-                                    "linear-gradient(to left, #21232f 5.89%,rgba(40, 46, 77, .4) 86.41%)",
-                                border: " 1px solid rgba(255, 255, 255, 0.12)",
-                                borderRadius: "12px",
-                                overflow: "hidden",
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    padding: "15px 20px",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <TypoH2>SGD / USD</TypoH2>
-                                <TimeP>5h 24m 02s</TimeP>
-                            </Box>
-                            <Hr></Hr>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    padding: "15px 20px",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <Box>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            gap: "10px",
-                                            color: " rgba(255, 255, 255, 0.55)",
-                                        }}
-                                    >
-                                        <span>3%</span>
-                                        <Dot></Dot>
-                                        <span>1 year</span>
-                                    </Box>
-                                    <TypoH3>$2,832,247.72</TypoH3>
-                                </Box>
-                                <Box
-                                    sx={{
-                                        width: "60px",
-                                    }}
-                                >
-                                    {/* <img src={grpNft} alt="" /> */}
-                                </Box>
-                            </Box>
-                        </Box>
-                    </Grid>
-                    <Grid item md={3}>
-                        <Box
-                            sx={{
-                                background:
-                                    "linear-gradient(to left, #21232f 5.89%,rgba(40, 46, 77, .4) 86.41%)",
-                                border: " 1px solid rgba(255, 255, 255, 0.12)",
-                                borderRadius: "12px",
-                                overflow: "hidden",
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    padding: "15px 20px",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <TypoH2>SGD / USD</TypoH2>
-                                <TimeP>5h 24m 02s</TimeP>
-                            </Box>
-                            <Hr></Hr>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    padding: "15px 20px",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <Box>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            gap: "10px",
-                                            color: " rgba(255, 255, 255, 0.55)",
-                                        }}
-                                    >
-                                        <span>3%</span>
-                                        <Dot></Dot>
-                                        <span>1 year</span>
-                                    </Box>
-                                    <TypoH3>$2,832,247.72</TypoH3>
-                                </Box>
-                                <Box
-                                    sx={{
-                                        width: "60px",
-                                    }}
-                                >
-                                    {/* <img src={grpNft} alt="" /> */}
-                                </Box>
-                            </Box>
-                        </Box>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
             </Box>
         </div>
