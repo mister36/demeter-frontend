@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as ethers from "ethers";
+import { setup, SwapService } from "@liquality/wallet-sdk";
 import AppBar from "@mui/material/AppBar";
 import { Box } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -29,6 +30,23 @@ import { BiMoon } from "react-icons/bi";
 import { BsBellFill } from "react-icons/bs";
 import { FaEthereum } from "react-icons/fa";
 import Feature_searchbar from "./Feature_searchbar";
+import Swap from "./Swap";
+
+const setupSDK = () => {
+    const { REACT_APP_ALCHEMY, REACT_APP_POLYGONSCAN, REACT_APP_INFURA } =
+        process.env;
+    setup({
+        alchemyApiKey: REACT_APP_ALCHEMY,
+        etherscanApiKey: REACT_APP_POLYGONSCAN,
+        infuraProjectId: REACT_APP_INFURA,
+        pocketNetworkApplicationID: "-",
+        quorum: 1,
+        slowGasPriceMultiplier: 1,
+        averageGasPriceMultiplier: 1.5,
+        fastGasPriceMultiplier: 2,
+        gasLimitMargin: 2000,
+    });
+};
 
 const drawerWidth = 240;
 const Ul = styled.ul`
@@ -346,8 +364,37 @@ function Main(props) {
         setMobileOpen(!mobileOpen);
     };
 
+    const tokenAddresses = {
+        MATIC: "0x0000000000000000000000000000000000000000",
+
+        WMATIC: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+    };
+
     const container =
         window !== undefined ? () => window.document.body : undefined;
+
+    const [swapVisible, setSwapVisible] = useState(false);
+
+    useEffect(() => {
+        setupSDK();
+    }, []);
+
+    useEffect(() => {
+        const getQuote = async () => {
+            const quote = await SwapService.getQuote({
+                srcChainId: 137,
+                srcChainTokenIn: tokenAddresses.MATIC,
+                srcChainTokenInAmount: ethers.BigNumber.from(10)
+                    .pow(18)
+                    .toString(),
+                dstChainId: 137,
+                dstChainTokenOut: tokenAddresses.WMATIC,
+            });
+            console.log(quote.minAmount);
+        };
+
+        getQuote();
+    }, []);
 
     return (
         <div sx={{ display: "flex" }}>
@@ -448,6 +495,8 @@ function Main(props) {
                     {drawer}
                 </Drawer> */}
             </div>
+            {swapVisible ? <Swap /> : null}
+
             <Box
                 component="main"
                 sx={{
@@ -465,7 +514,7 @@ function Main(props) {
                         width: { sm: `calc(100% - ${drawerWidth}px)` },
                     }}
                 >
-                    <Feature_searchbar />
+                    <Feature_searchbar setSwapVisible={setSwapVisible} />
                 </Box>
                 <BtmHR></BtmHR>
                 {/* Auctions */}

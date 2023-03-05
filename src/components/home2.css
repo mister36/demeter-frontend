@@ -1,10 +1,9 @@
 .nice-blue-color {
-    color: #4C82FB;
+    color: #4c82fb;
 }
 .nice-purple-color {
-    color: #98A1C0;
+    color: #98a1c0;
 }
-
 
 .background {
     background: linear-gradient(180deg, #202738, #070816);
@@ -23,7 +22,6 @@
     border-color: rgb(255, 255, 255, 0.14);
     background-color: rgb(255, 255, 255, 0.07);
 }
-
 
 .portal1 {
     height: 982px;
@@ -69,9 +67,8 @@
     background: rgb(76, 130, 251, 0.5);
 }
 
-
 .features {
-    background-color: #0D111C;
+    background-color: #0d111c;
 }
 .features-l1 {
     width: 644px;
@@ -87,13 +84,13 @@
     width: 420px;
     height: 240px;
     background: #060614;
-    border: #1B2236 0.25px solid;
+    border: #1b2236 0.25px solid;
 }
 
 .giant-pill {
-    background: radial-gradient(
-        100% 120%,
-        #4673FA,
-        rgba(166, 151, 255, 0)
-    );
+    background: radial-gradient(100% 120%, #4673fa, rgba(166, 151, 255, 0));
+}
+
+#swap-text {
+    cursor: pointer;
 }

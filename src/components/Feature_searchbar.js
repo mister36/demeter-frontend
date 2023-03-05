@@ -38,7 +38,25 @@ function Feature_searchbar() {
     return (
         <div>
             {" "}
-            <FeatureH1>Featured Offerings</FeatureH1>
+            <div
+                style={{
+                    display: "flex",
+                    width: "400px",
+                    justifyContent: "space-between",
+                }}
+            >
+                <FeatureH1>Featured Offerings</FeatureH1>
+                <div
+                    id="swap-text"
+                    style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        alignSelf: "center",
+                    }}
+                >
+                    Swap
+                </div>
+            </div>
             <Box
                 sx={{
                     padding: "25px 0px 25px",
