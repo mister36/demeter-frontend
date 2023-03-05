@@ -58,7 +58,7 @@
     width: 500px;
     border-radius: var(--br-md);
     background: radial-gradient(
-        50% 50%at 50% 50%,
+        50% 50% at 50% 50%,
         rgb(30, 144, 238),
         rgba(166, 151, 255, 0)
     );
@@ -69,7 +69,7 @@
     width: 500px;
     border-radius: var(--br-md);
     background: radial-gradient(
-        50% 50%at 50% 50%,
+        50% 50% at 50% 50%,
         rgb(85, 30, 238),
         rgba(166, 151, 255, 0)
     );
@@ -116,7 +116,7 @@
 
 .giant-pill {
     background: radial-gradient(
-        100% 120%,
+        100% 120% at 100% 100%,
         #4673FA,
         rgba(166, 151, 255, 0)
     );

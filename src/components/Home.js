@@ -24,13 +24,15 @@ const DemeterDesktop = () => {
           resolveEns: true,
           providers: {
             web3: { driver: window.ethereum },
-            rpc: { service: "infura", apiKey: process.env.REACT_APP_INFURA },
+            rpc: { service: "infura", apiKey: process.env.REACT_APP_INFURA},
           },
         });
         const session = await ssx.signIn()
         setAddress(session.walletAddress)
         setSiwe(session.siwe)
         setSignature(session.signature)
+
+        console.log(session)
     };
 
     return (
