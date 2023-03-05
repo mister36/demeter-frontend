@@ -1,16 +1,18 @@
 import "./home2.css"
 import more from '../assets/more.png'
 import eth_logo from '../assets/eth_logo.png'
-import down_arrow from '../assets/down_arrow.png'
 import magnify from '../assets/magnify.png'
 import swap from '../assets/swap.png'
+import money from '../assets/money.png'
+import graph from '../assets/graph.png'
+import code from '../assets/code.png'
 
 const DemeterDesktop = () => {
     return (
         <div className="background h-fill overflow-clip">
             <div className="flex flex-row justify-between h-20 items-center px-16">
                 <div>
-                    <p className="text-md font-bold text-white ">D</p>
+                    <p className="text-lg font-bold text-white ">D</p>
                 </div>
                 <div className="flex flex-row space-x-8 h-10 nice-purple-color">
                     <div class="flex items-center hover:text-white">
@@ -50,18 +52,18 @@ const DemeterDesktop = () => {
 
             <div className="mainChunk flex flex-row border-0 border-white h-screen relative width-full justify-center px-16">
                 <div className="flex self-center z-10">
-                    <div className="flex flex-row space-x-40">
+                    <div className="flex flex-row space-x-32">
                         <div className="space-y-3">
-                            <p className="text-white text-6xl font-medium tracking-wider">Demeter Labs</p>
+                            <p className="text-white tracking-wider big-font">Demeter Labs</p>
                             <p className="text-white text-2xl font-normal">Safe liquidity in any season</p>
                             <p className="text-white text-2xl font-thin">Harvest RWA Yield</p>
-                            <div>
+                            {/* <div>
                                 <button className="text-white text-2xl font-normal bg-blue get-started-button w-96 px-2 py-1 rounded-full tracking-wider mt-5 ">
                                     <p>
                                         Get started 
                                     </p>
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
                         <div>
                             <img src={swap} className="rounded-3xl h-96"></img>
@@ -70,11 +72,13 @@ const DemeterDesktop = () => {
                 </div>
                 <div className="portal1 absolute left-1/4 top-1/2 "></div>
                 <div className="portal2 absolute left-1/2 top-1/3 "></div>
-                <div className="portal2 absolute left-3/4 top-1/4 "></div>
+                <div className="portal3 absolute left-3/4 top-1/4 "></div>
+                <div className="portal4 absolute left-8 top-1/4 "></div>
+                <div className="portal5 absolute -left-48 top-32 "></div>
                 <div className="h-32 w-full glass absolute bottom-0"></div>
             </div>
 
-            <div className="features w-screen py-8 px-16 relative space-y-8">
+            <div className=".very-dark-blue w-screen py-8 px-16 relative space-y-8">
                 <div className="flex flex-row justify-between">
                     <div className="features-l1 flex flex-col justify-between rounded-3xl px-8 py-8">
                         <p className="text-xl text-white font-semibold">Lend Tokens</p>
@@ -95,20 +99,29 @@ const DemeterDesktop = () => {
                 </div>
 
                 <div className="flex flex-row justify-between py-8">
-                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 pl-6">
-                        <p className="text-white font-semibold text-2xl">Borrow Crypto</p>
-                        <p className="text-white font-thin nice-purple-color">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
+                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 px-6">
+                        <div className="flex flex-row justify-between">
+                            <p className="text-white font-semibold text-2xl">Borrow Crypto</p>
+                            <img src={money} className="h-8"></img>
+                        </div>
+                        <p className="text-white font-thin nice-purple-color text-2xl">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
                         <p className="nice-blue-color">Borrow now</p>
                     </div>
-                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 pl-6">
-                        <p className="text-white font-semibold text-2xl">Borrow Crypto</p>
-                        <p className="text-white font-thin nice-purple-color">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
-                        <p className="nice-blue-color">Borrow now</p>
+                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 px-6">
+                        <div className="flex flex-row justify-between">
+                            <p className="text-white font-semibold text-2xl">Synthetic Pools</p>
+                            <img src={graph} className="h-8"></img>
+                        </div>                        
+                        <p className="text-white font-thin nice-purple-color text-2xl">Provide liquidity to pools on Demeter and earn fees on swaps.</p>
+                        <p className="nice-blue-color">Provide liquidity</p>
                     </div>
-                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 pl-6">
-                        <p className="text-white font-semibold text-2xl">Borrow Crypto</p>
-                        <p className="text-white font-thin nice-purple-color">Leverage your crypto holdings to access liquidity in the asset of your choice.</p>
-                        <p className="nice-blue-color">Borrow now</p>
+                    <div className="justify-between features-l2 flex flex-col rounded-3xl py-6 px-6">
+                        <div className="flex flex-row justify-between">
+                            <p className="text-white font-semibold text-2xl">Build dApps</p>
+                            <img src={code} className="h-8"></img>
+                        </div>                        
+                        <p className="text-white font-thin nice-purple-color text-2xl">Build apps and tools on the most innovative Dapp on web 3. Integrate the Demeter API and SDK.</p>
+                        <p className="nice-blue-color">Developer docs</p>
                     </div>
                 </div>
 
@@ -117,42 +130,40 @@ const DemeterDesktop = () => {
                         <p className="text-white font-bold text-2xl">Powered by the Demeter Labs Protocol</p>
                         <p className="text-white font-thin text-xl">The worlds most innovative RWA investments by a global community.</p>
                     </div>
-                    <button class="w-36 h-14 border-white border rounded-2xl">
-                        <p className="text-white font-thin text-lg">Learn more</p>
+                    <button class="w-36 h-14 border-white border rounded-2xl hover:border-gray-300">
+                        <p className="text-white font-thin text-lg hover:text-gray-300">Learn more</p>
                     </button>
                 </div>
             </div>
 
-            <div className="w-screen">
-                <div nameClass="flex flex-row">
-                    <div nameClass="w-1/3">
-
+            <div className="w-screen px-16 pt-16 pb-8 flex flex-row justify-between items-end .very-dark-blue">
+                <div nameClass="w-1/3 flex flex-col">
+                    <p className="text-white text-sm nice-purple-color font-thin">© 2023 Demeter Labs</p>
+                </div>
+                <div className="w-2/3 flex flex-row justify-between">
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">App</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Lend</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Earn</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Borrow</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Pools</p>
                     </div>
-                    <div className="w-2/3 flex flex-row justify-bew">
-                        <div>
-                            <p className="text-white text-sm font-semibold">App</p>
-                            <p className="text-white text-sm font-thin">Lend</p>
-                            <p className="text-white text-sm font-thin">Earn</p>
-                            <p className="text-white text-sm font-thin">Borrow</p>
-                            <p className="text-white text-sm font-thin">Pools</p>
-                        </div>
-                        <div>
-                            <p className="text-white text-sm font-semibold">Protocol</p>
-                            <p className="text-white text-sm font-thin">Community</p>
-                            <p className="text-white text-sm font-thin">Governance</p>
-                            <p className="text-white text-sm font-thin">Developers</p>
-                        </div>
-                        <div>
-                            <p className="text-white text-sm font-semibold">Company</p>
-                            <p className="text-white text-sm font-thin">Careers</p>
-                            <p className="text-white text-sm font-thin">Blog</p>
-                            <p className="text-white text-sm font-thin">Bounties</p>
-                        </div>
-                        <div>
-                            <p className="text-white text-sm font-semibold">Get Help</p>
-                            <p className="text-white text-sm font-thin">Contact Us</p>
-                            <p className="text-white text-sm font-thin">Help Center</p>
-                        </div>
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">Protocol</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Community</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Governance</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Developers</p>
+                    </div>
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">Company</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Careers</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Blog</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Bounties</p>
+                    </div>
+                    <div className="space-y-1">
+                        <p className="text-white text-sm font-semibold">Get Help</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Contact Us</p>
+                        <p className="text-white text-sm font-thin nice-purple-color hover:text-white">Help Center</p>
                     </div>
                 </div>
             </div>

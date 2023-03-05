@@ -4,6 +4,12 @@
 .nice-purple-color {
     color: #98A1C0;
 }
+.very-dark-blue {
+    background-color: #0D111C;
+}
+.big-font {
+    font-size: 100px;
+}
 
 
 .background {
@@ -31,7 +37,7 @@
     border-radius: var(--br-md);
     background: radial-gradient(
         50% 50%at 50% 50%,
-        #082be1,
+        #3008e1,
         rgba(166, 151, 255, 0)
     );
 }
@@ -53,7 +59,29 @@
     border-radius: var(--br-md);
     background: radial-gradient(
         50% 50%at 50% 50%,
-        rgb(30, 65, 238),
+        rgb(30, 144, 238),
+        rgba(166, 151, 255, 0)
+    );
+}
+
+.portal4 {
+    height: 982px;
+    width: 500px;
+    border-radius: var(--br-md);
+    background: radial-gradient(
+        50% 50%at 50% 50%,
+        rgb(85, 30, 238),
+        rgba(166, 151, 255, 0)
+    );
+}
+
+.portal5 {
+    height: 982px;
+    width: 500px;
+    border-radius: var(--br-md);
+    background: radial-gradient(
+        50% 50%at 50% 50%,
+        rgb(130, 30, 238),
         rgba(166, 151, 255, 0)
     );
 }
@@ -69,10 +97,6 @@
     background: rgb(76, 130, 251, 0.5);
 }
 
-
-.features {
-    background-color: #0D111C;
-}
 .features-l1 {
     width: 644px;
     height: 360px;
