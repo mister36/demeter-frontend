@@ -9,6 +9,7 @@ import code from '../assets/code.png'
 import { useNavigate } from "react-router-dom";
 import React from "react"
 import { SSX } from "@spruceid/ssx";
+import logo from '../assets/logo.png'
 
 
 const DemeterDesktop = () => {
@@ -192,6 +193,7 @@ const DemeterDesktop = () => {
 
             <div className="w-screen px-16 pt-16 pb-8 flex flex-row justify-between items-end .very-dark-blue">
                 <div className="w-1/3 flex flex-col">
+                    <img src={logo} className="h-20 w-20 mb-4"></img>
                     <p className="text-white text-sm nice-purple-color font-thin">© 2023 Demeter Labs</p>
                 </div>
                 <div className="w-2/3 flex flex-row justify-between">
