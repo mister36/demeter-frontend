@@ -1,4 +1,4 @@
-import "./index.css";
+import "./Home.css";
 
 const DemeterDesktop = () => {
     return (

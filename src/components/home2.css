@@ -1,0 +1,77 @@
+.background {
+    background: linear-gradient(180deg, #202738, #070816);
+}
+
+.buttonz {
+    color: #98A1C0;
+}
+
+.header-connect-button {
+    background-color: rgb(76, 130, 251, 0.3);
+}
+
+.header-connect-button p {
+    color: #4C82FB
+}
+
+.searchbox {
+    border-width: 0.25px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255, 0.14);
+    background-color: rgb(255, 255, 255, 0.07);
+}
+
+.sarchbox p {
+    color: #98A1C0;
+}
+
+
+
+
+.portal1 {
+    height: 982px;
+    width: 480px;
+    border-radius: var(--br-md);
+    background: radial-gradient(
+        50% 50%at 50% 50%,
+        #082be1,
+        rgba(166, 151, 255, 0)
+    );
+}
+.portal2 {
+    height: 982px;
+    width: 550px;
+    border-radius: var(--br-md);
+    background: radial-gradient(
+        50% 50%at 50% 50%,
+        rgb(28, 60, 220),
+        rgba(166, 151, 255, 0)
+    );
+}
+.portal3 {
+    height: 982px;
+    width: 500px;
+    border-radius: var(--br-md);
+    background: radial-gradient(
+        50% 50%at 50% 50%,
+        rgb(30, 65, 238),
+        rgba(166, 151, 255, 0)
+    );
+}
+
+.get-started-button {
+    background: rgb(76, 130, 251, 0.3);
+}
+.get-started-button:hover {
+    background: rgb(76, 130, 251, 0.5);
+}
+
+
+.features-l1 {
+    background: #131A2A;
+    width: 644px;
+    height: 360px;
+}
+.fake-buttons {
+    color: #4C82FB;
+}
