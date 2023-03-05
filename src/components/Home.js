@@ -83,7 +83,7 @@ const DemeterDesktop = () => {
                 </div>
             </div>
 
-            <div className="mainChunk flex flex-row border-0 border-white h-screen relative width-full justify-center px-16">
+            <div className="mainChunk flex flex-row border-0 border-white h-screen relative width-full justify-center px-16 ">
                 <div className="flex self-center z-10">
                     <div className="flex flex-row space-x-32">
                         <div className="space-y-3">
